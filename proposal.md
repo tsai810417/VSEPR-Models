@@ -8,17 +8,17 @@ User can select generic formula on the menu to view it in 3D.
 ## Functionality and MVP
 By selecting a shape, users will see:
 - [ ] Informations about bond angles
-- [ ] Generic formula
+- [ ] Molecular shape
 - [ ] Example
 - [ ] 3D interactive molecule
 
 In VSEPR Models, users will be able to:
 - [ ] Select which shape to interact with
-- [ ] Rotate the model by buttons
-- [ ] Zoom in/out by buttons
+- [ ] Rotate the molecule by dragging or buttons
+- [ ] Zoom in/out by scrolling or buttons
 
 ## Wireframes
-This app will consist of 2 containers and contents will be updated according to user's selection of which model to display.
+This app will consist of 2 containers and contents will be updated according to user's selection of which configuration to display.
 
 ![Wireframe](https://github.com/tsai810417/resources/blob/master/Untitled%20Diagram.png?raw=true)
 
@@ -54,4 +54,4 @@ This project will be build with the following technologies:
 - [ ] Create controls to interact with the rendered molecule
 
 ## Bonus Features
-- [ ] User can type in molecules can the application will render the determine the geometry and render 3D molecule
+- [ ] User can type in molecules, then the application will determine the geometry and render 3D molecule and informations
