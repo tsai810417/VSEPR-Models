@@ -4,7 +4,7 @@ VSEPR Theory is used to predict the molecule geometry. It mainly has 18 differen
 
 VSEPR Models is a tool that illustrate the 3D views of different shapes.
 
-User can select shape on the menu to view it in 3D.
+User can select generic formula on the menu to view it in 3D.
 ## Functionality and MVP
 By selecting a shape, users will see:
 - [ ] Informations about bond angles
@@ -49,7 +49,7 @@ This project will be build with the following technologies:
 #### Day 3: Set up the logic deciding render which component
 - [ ] Build functions for calling each molecule to be rendered in the component
 
-#### Day 4: Adding more animations to the components 
+#### Day 4: Adding more animations to the components
 - [ ] Add animations to the 3D molecule
 - [ ] Create controls to interact with the rendered molecule
 
