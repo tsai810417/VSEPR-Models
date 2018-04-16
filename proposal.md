@@ -34,8 +34,9 @@ This project will be build with the following technologies:
 
 #### Over the Weekend: Prepare the resources for the project
 - [ ] Finish reading the tutorial of how to use ChemDoodle
-- [ ] Set up the menu and actions when buttons are clicked
-- [ ] Download 3D molfiles for all the molecules needed
+- [ ] Set up index.html and main.js
+- [ ] Set up the menu and introductions on how to use this application
+- [ ] Download 3D .mol files for all the molecules needed
 
 #### Day 1: Set up the environment to begin with the project and create backend data
 - [ ] Setup webpack, including webpack.config.js and package.json
@@ -43,6 +44,7 @@ This project will be build with the following technologies:
 - [ ] Setup HTML file and canvas tag where the 3D molecule will be rendered
 
 #### Day 2: Start building the canvas components
+- [ ] Build onClick functions for the buttons
 - [ ] Build the component to render the informations
 - [ ] Build the canvas components of molecule objects, ready to render when called by function
 
