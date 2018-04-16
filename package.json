@@ -1,0 +1,26 @@
+{
+  "name": "vsepr_models",
+  "version": "1.0.0",
+  "description": "vsper",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsai810417/VSEPR-Models.git"
+  },
+  "keywords": [
+    "vsper"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsai810417/VSEPR-Models/issues"
+  },
+  "homepage": "https://github.com/tsai810417/VSEPR-Models#readme",
+  "dependencies": {
+    "webpack": "^3.4.1"
+  }
+}
