@@ -69,9 +69,13 @@ const getExample = function (n) {
   return examples[n];
 }
 
+let canvas = new ChemDoodle.TransformCanvas3D('canvas', 300, 300);
+canvas.specs.set3DRepresentation('Ball and Stick');
+canvas.specs.backgroundColor = 'black';
 
 document.addEventListener('DOMContentLoaded', () => {
   const menu = document.getElementById('menu');
+
   for (var i = 0; i < menuArr.length; i++) {
     let button = document.createElement('button');
     button.innerHTML = menuArr[i];
@@ -86,15 +90,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
       document.getElementById('example').innerHTML = `Example: ${getExample(n)}`;
 
+      ChemDoodle.io.file.content(`./model/${getExample(n)}.mol`, function(ex) {
+        const mol = ChemDoodle.readMOL(ex, 1);
+        canvas.loadMolecule(mol);
+      });
     });
   };
 });
 
-
+//
 // var transformBallAndStick = new ChemDoodle.TransformCanvas3D('transformBallAndStick', 250, 250);
 // transformBallAndStick.specs.set3DRepresentation('Ball and Stick');
 // transformBallAndStick.specs.backgroundColor = 'black';
-// ChemDoodle.io.file.content('./model/Selenium hexachloride.mol', function(fileContent){
+// ChemDoodle.io.file.content('./model/IF5.mol', function(fileContent){
 //   const mol = ChemDoodle.readMOL(fileContent, 1);
 //   transformBallAndStick.loadMolecule(mol);
 // })
