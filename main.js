@@ -2,8 +2,7 @@ const examples = 'H2 CO2 CN- AlBr3 SnCl2 O2 SiCl4 PH3 SeBr2 Cl2 AsF5 SeH4 ICl3 B
 
 const menuArr = 'AX AX2 AXE AX3 AX2E AXE2 AX4 AX3E AX5 AX4E AX3E2 AX2E3 AX6 AX5E AX4E2'.split(' ');
 
-let bondAngles, elecGeo, shape, example;
-const getbondAngles = function (n) {
+const getBondAngles = function (n) {
   if (n === 4) {
     return '120°';
   } else if (n === 5) {
@@ -78,11 +77,16 @@ document.addEventListener('DOMContentLoaded', () => {
     button.innerHTML = menuArr[i];
     menu.appendChild(button);
     let n = i;
-    // button.addEventListener('click',() => console.log(n))
     button.addEventListener('click',() => {
-      document.getElementById('bondAngles').innerHTML = `Bond Angles: ${getbondAngles(n)}`;
+      document.getElementById('bondAngles').innerHTML = `Bond Angles: ${getBondAngles(n)}`;
 
-    })
+      document.getElementById('elecGeo').innerHTML = `Electron Geometry: ${getElecGeo(n)}`;
+
+      document.getElementById('shape').innerHTML = `Shape: ${getShape(n)}`;
+
+      document.getElementById('example').innerHTML = `Example: ${getExample(n)}`;
+
+    });
   };
 });
 
