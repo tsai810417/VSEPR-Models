@@ -3,21 +3,21 @@ const examples = 'H2 CO2 CN- AlBr3 SnCl2 O2 SiCl4 PH3 SeBr2 Cl2 AsF5 SeH4 ICl3 B
 const menuArr = 'AX AX2 AXE AX3 AX2E AXE2 AX4 AX3E AX5 AX4E AX3E2 AX2E3 AX6 AX5E AX4E2'.split(' ');
 
 const getBondAngles = function (n) {
-  if (n === 4) {
+  if (n === 3) {
     return '120°';
-  } else if (n === 5) {
+  } else if (n === 4) {
     return '< 120°';
-  } else if (n === 7) {
+  } else if (n === 6) {
     return '109.5°';
-  } else if (n === 8 || n === 9) {
+  } else if (n === 7 || n === 8) {
     return ' < 109.5°';
-  } else if (n === 11) {
+  } else if (n === 10) {
     return '90°/120°';
-  } else if (n === 12) {
+  } else if (n === 11) {
     return '< 90°/120°/180°';
-  } else if (n === 13 || n === 16) {
+  } else if (n === 12 || n === 15) {
     return '< 90°/180°';
-  } else if (n === 15 || n === 17) {
+  } else if (n === 14 || n === 16) {
     return '90°/180°';
   } else {
     return '180°';
@@ -25,13 +25,13 @@ const getBondAngles = function (n) {
 };
 
 const getElecGeo = function (n) {
-  if (n < 4) {
+  if (n < 3) {
     return 'Linear';
-  } else if (n < 7) {
+  } else if (n < 6) {
     return 'Trigonal Planer';
-  } else if (n < 11) {
+  } else if (n < 10) {
     return 'Tetrahedral';
-  } else if (n < 15) {
+  } else if (n < 14) {
     return 'Trigonal Bipyramidal';
   } else {
     return 'Octahedral';
@@ -39,25 +39,25 @@ const getElecGeo = function (n) {
 }
 
 const getShape = function (n) {
-  if (n === 4) {
+  if (n === 3) {
     return 'Trigonal Planer';
-  } else if (n === 5 || n === 9) {
+  } else if (n === 4 || n === 8) {
     return 'Bent';
-  } else if (n === 7) {
+  } else if (n === 6) {
     return 'Tetrahedral';
-  } else if (n === 8) {
+  } else if (n === 7) {
     return 'Trigonal Pyramid';
-  } else if (n === 11) {
+  } else if (n === 10) {
     return 'Trigonal Bipyramidal';
-  } else if (n === 12) {
+  } else if (n === 11) {
     return 'See-saw';
-  } else if (n === 13) {
+  } else if (n === 12) {
     return 'T-shape';
-  } else if (n === 15) {
+  } else if (n === 14) {
     return 'Octahedral';
-  } else if (n === 16) {
+  } else if (n === 15) {
     return 'Square Pyramid';
-  } else if (n === 17) {
+  } else if (n === 16) {
     return 'Square Planer';
   } else {
     return 'Linear';
