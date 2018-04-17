@@ -97,12 +97,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 });
-
-//
-// var transformBallAndStick = new ChemDoodle.TransformCanvas3D('transformBallAndStick', 250, 250);
-// transformBallAndStick.specs.set3DRepresentation('Ball and Stick');
-// transformBallAndStick.specs.backgroundColor = 'black';
-// ChemDoodle.io.file.content('./model/IF5.mol', function(fileContent){
-//   const mol = ChemDoodle.readMOL(fileContent, 1);
-//   transformBallAndStick.loadMolecule(mol);
-// })
