@@ -1,3 +1,8 @@
+const examples = 'H2 CO2 CN- AlBr3 SnCl2 O2 SiCl4 PH3 SeBr2 Cl2 AsF5 SeH4 ICl3 BrF2 SeCl6 IF5 XeF4'.split(' ');
+
+const menuArr = 'AX AX2 AXE AX3 AX2E AXE2 AX4 AX3E AX5 AX4E AX3E2 AX2E3 AX6 AX5E AX4E2'.split(' ');
+
+let bondAngles, elecGeo, shape, example;
 const getbondAngles = function (n) {
   if (n === 4) {
     return '120°';
@@ -60,13 +65,10 @@ const getShape = function (n) {
   }
 }
 
-const examples = 'H2 CO2 CN- AlBr3 SnCl2 O2 SiCl4 PH3 SeBr2 Cl2 AsF5 SeH4 ICl3 BrF2 SeCl6 IF5 XeF4'.split(' ');
 
 const getExample = function (n) {
   return examples[n];
 }
-
-const menuArr = 'AX AX2 AXE AX3 AX2E AXE2 AX4 AX3E AX5 AX4E AX3E2 AX2E3 AX6 AX5E AX4E2'.split(' ');
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -76,7 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
     button.innerHTML = menuArr[i];
     menu.appendChild(button);
     let n = i;
-    button.addEventListener('click',() => getExample(n))
+    // button.addEventListener('click',() => console.log(n))
+    button.addEventListener('click',() => {
+      document.getElementById('bondAngles').innerHTML = `Bond Angles: ${getbondAngles(n)}`;
+
+    })
   };
 });
 
