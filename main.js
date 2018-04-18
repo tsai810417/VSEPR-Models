@@ -1,6 +1,6 @@
-const examples = 'H2 CO2 CN- AlBr3 SnCl2 O2 SiCl4 PH3 SeBr2 Cl2 AsF5 SeH4 ICl3 BrF2 SeCl6 IF5 XeF4'.split(' ');
+const examples = 'H2 CO2 CN- AlBr3 SnCl2 O2 SiCl4 PH3 SeBr2 Cl2 AsF5 TeF4 ICl3 BrF2 SeCl6 IF5 XeF4'.split(' ');
 
-const menuArr = 'AX AX2 AXE AX3 AX2E AXE2 AX4 AX3E AX5 AX4E AX3E2 AX2E3 AX6 AX5E AX4E2'.split(' ');
+const menuArr = 'AX AX2 AXE AX3 AX2E AXE2 AX4 AX3E AX2E2 AXE3 AX5 AX4E AX3E2 AX2E3 AX6 AX5E AX4E2'.split(' ');
 
 const getBondAngles = function (n) {
   if (n === 3) {
@@ -65,13 +65,15 @@ const getShape = function (n) {
 }
 
 
+
 const getExample = function (n) {
   return examples[n];
 }
 
-let canvas = new ChemDoodle.TransformCanvas3D('canvas', 300, 300);
+let canvas = new ChemDoodle.TransformCanvas3D('transformAngle', 300, 300);
 canvas.specs.set3DRepresentation('Ball and Stick');
 canvas.specs.backgroundColor = 'black';
+canvas.specs.shapes_color = '#fff';
 
 document.addEventListener('DOMContentLoaded', () => {
   const menu = document.getElementById('menu');
@@ -82,6 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.appendChild(button);
     let n = i;
     button.addEventListener('click',() => {
+      document.getElementById('title').innerHTML = `${menuArr[n]}`;
+
       document.getElementById('bondAngles').innerHTML = `Bond Angles: ${getBondAngles(n)}`;
 
       document.getElementById('elecGeo').innerHTML = `Electron Geometry: ${getElecGeo(n)}`;
@@ -92,7 +96,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       ChemDoodle.io.file.content(`./model/${getExample(n)}.mol`, function(ex) {
         const mol = ChemDoodle.readMOL(ex, 1);
-        canvas.loadMolecule(mol);
+        if (mol.atoms.length < 3) {
+          canvas.loadMolecule(mol)
+        } else {
+          const angle = new ChemDoodle.structures.d3.Angle(mol.atoms[1], mol.atoms[0], mol.atoms[2]);
+          canvas.loadContent([mol], [angle]);
+        }
       });
     });
   };
