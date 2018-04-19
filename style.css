@@ -14,8 +14,8 @@ margin: 10px;
 }
 
 #main {
-  margin-top: 25px;
   display: flex;
+  margin-top: 25px;
 }
 
 #main > section {
