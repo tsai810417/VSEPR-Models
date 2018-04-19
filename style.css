@@ -4,7 +4,7 @@ body {
   font-family: 'Dosis', sans-serif;
   width: 80%;
   margin: auto;
-  margin-bottom: 100px
+  margin-bottom: 100px;
 }
 
 h1 {
@@ -13,21 +13,60 @@ font-size: 80px;
 margin: 10px;
 }
 
-#first {
+#main {
+  margin-top: 25px;
+  display: flex;
+}
 
+#main > section {
+  width: 80%;
+  align-self: center;
+}
+
+#main > aside {
+  width: 20%;
+  padding: 3px;
+  align-self: center;
+}
+
+#second {
+  margin-left: 10px;
+}
+
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+button {
+  font-family: 'Dosis', sans-serif;
+  font-size: 17px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 70px;
+}
+
+button:hover {
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: #B8BBBB;
+}
+
+
+#first {
+  font-size: 20px;
 }
 
 #model {
   display: flex;
   justify-content: space-between;
-}
-
-#info {
-  width: 50%;
+  border: 1px solid #FFFFFF;
 }
 
 #title {
   margin: 10px;
+  margin-bottom: 20px;
   font-size: 40px;
   font-weight: bold;
   text-align: center;

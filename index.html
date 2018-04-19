@@ -10,35 +10,46 @@
     <script type="text/javascript" src='./bundle.js'></script>
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
   </head>
+
+  <header>
+
+  </header>
   <body>
     <h1>VSEPR Model</h1>
     <p id="first">VSEPR theory is used to predict a chemical molecule geometry based on the number of lone electron pairs surrounded and number of ligands bounded to the central atom. In this application, you will be able to illustrate and interact with the 3D model of each geometries.</p>
-    <p id='title'>AX</p>
-    <div id="model">
-      <div id="info">
-        <ul>
-          <li id="bondAngles">Bond Angles: 180°</li>
-          <li id="shape">Shape: Linear</li>
-          <li id="elecGeo">Electron Geometry: Linear</li>
-          <li id="example">Example: H2</li>
-        </ul>
-      </div>
-      <script>
-        let canvas = new ChemDoodle.TransformCanvas3D('canvas', 400, 300);
-        canvas.specs.set3DRepresentation('Ball and Stick');
-        canvas.specs.backgroundColor = 'black';
-        canvas.specs.shapes_color = '#fff';
-        canvas.rotationMatrix = [-0.7642828551529963, 0.2725631211471551, 0.5844493667630553, 0, 0.19590150606240647, 0.9615904816938188, -0.1922663398474939, 0, -0.614405661791702, -0.03245135600235631, -0.7883226447666873, 0, 0, 0, 0, 1];
-        ChemDoodle.io.file.content(`./model/H2.mol`, function(ex) {
-          const mol = ChemDoodle.readMOL(ex, 1);
-          canvas.loadMolecule(mol);
-        });
-      </script>
-      <p></p>
+
+    <div id="main">
+      <section>
+        <p id='title'>AX</p>
+        <div id="model">
+          <div id="info">
+            <ul>
+              <li id="bondAngles">Bond Angles: 180°</li>
+              <li id="shape">Shape: Linear</li>
+              <li id="elecGeo">Electron Geometry: Linear</li>
+              <li id="example">Example: H2</li>
+            </ul>
+          </div>
+          <script>
+          let canvas = new ChemDoodle.TransformCanvas3D('canvas', 400, 300);
+          canvas.specs.set3DRepresentation('Ball and Stick');
+          canvas.specs.backgroundColor = 'black';
+          canvas.specs.shapes_color = '#fff';
+          canvas.rotationMatrix = [-0.7642828551529963, 0.2725631211471551, 0.5844493667630553, 0, 0.19590150606240647, 0.9615904816938188, -0.1922663398474939, 0, -0.614405661791702, -0.03245135600235631, -0.7883226447666873, 0, 0, 0, 0, 1];
+          ChemDoodle.io.file.content(`./model/H2.mol`, function(ex) {
+            const mol = ChemDoodle.readMOL(ex, 1);
+            canvas.loadMolecule(mol);
+          });
+          </script>
+        </div>
+      </section>
+      <aside>
+        <p id="second">Please select the generic formula below to view the sample geometry and more informations.</p>
+        <div id="menu">
+        </div>
+      </aside>
     </div>
-    <p>Please select the generic formula below to view the sample geometry and more informations.</p>
-    <div id="menu">
-    </div>
-    <p>Note: The generic formula is represented by 'AXE method', where A represents the central atom, X represents the number of ligands bounded to central atom, and E represents the number of lone pairs of electrons surrounding the central atom.</p>
+
+    <p>*Note: The generic formula is represented by 'AXE method', where A represents the central atom, X represents the number of ligands bounded to central atom, and E represents the number of lone pairs of electrons surrounding the central atom.</p>
   </body>
 </html>
