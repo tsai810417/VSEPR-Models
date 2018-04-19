@@ -64,6 +64,10 @@ button:hover {
   border: 1px solid #FFFFFF;
 }
 
+#model > #info {
+  width: 60%;
+}
+
 #title {
   margin: 10px;
   margin-bottom: 20px;
