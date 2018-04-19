@@ -64,22 +64,11 @@ const getShape = function (n) {
   }
 }
 
-
-
 const getExample = function (n) {
   return examples[n];
 }
 
-let canvas = new ChemDoodle.TransformCanvas3D('canvas', 300, 300);
-canvas.specs.set3DRepresentation('Ball and Stick');
-canvas.specs.backgroundColor = 'black';
-canvas.specs.shapes_color = '#fff';
-canvas.rotationMatrix = [-0.7642828551529963, 0.2725631211471551, 0.5844493667630553, 0, 0.19590150606240647, 0.9615904816938188, -0.1922663398474939, 0, -0.614405661791702, -0.03245135600235631, -0.7883226447666873, 0, 0, 0, 0, 1];
-ChemDoodle.io.file.content(`./model/${getExample(0)}.mol`, function(ex) {
-  const mol = ChemDoodle.readMOL(ex, 1);
-  canvas.loadMolecule(mol);
-});
-debugger
+// debugger
 document.addEventListener('DOMContentLoaded', () => {
   const menu = document.getElementById('menu');
 
