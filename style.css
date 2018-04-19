@@ -19,8 +19,8 @@ margin: 10px;
 }
 
 #main > section {
-  width: 80%;
   align-self: center;
+  width: 80%;
 }
 
 #main > aside {
