@@ -70,7 +70,16 @@ const getExample = function (n) {
 
 // debugger
 document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('modal');
+  const closeButton = document.getElementById('close-button');
   const menu = document.getElementById('menu');
+  modal.style.display = 'block';
+  closeButton.onclick = () => modal.style.display = 'none';
+  window.onclick = e => {
+    if (e.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
 
   for (var i = 0; i < menuArr.length; i++) {
     let button = document.createElement('button');
@@ -119,4 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
   };
+
+
 });
