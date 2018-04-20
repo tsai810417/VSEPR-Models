@@ -4,7 +4,7 @@
   "description": "vsper",
   "main": "main.js",
   "scripts": {
-    "start": "http-server -c-1",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --watch"
   },
@@ -26,6 +26,6 @@
     "webpack": "^3.4.1"
   },
   "engines": {
-    "node": "5.6.0"
+    "node": "8.1.2"
   }
 }
