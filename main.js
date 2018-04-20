@@ -68,7 +68,6 @@ const getExample = function (n) {
   return examples[n];
 }
 
-// debugger
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('modal');
   const closeButton = document.getElementById('close-button');
@@ -104,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (n === 1) {
           const angle = new ChemDoodle.structures.d3.Angle(mol.atoms[1], mol.atoms[2], mol.atoms[0]);
           canvas.loadContent([mol], [angle]);
-          debugger
         } else if (n === 3) {
           const angle = new ChemDoodle.structures.d3.Angle(mol.atoms[0], mol.atoms[1], mol.atoms[3]);
           canvas.loadContent([mol], [angle]);
