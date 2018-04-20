@@ -88,13 +88,13 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click',() => {
       document.getElementById('title').innerHTML = `${menuArr[n]}`;
 
-      document.getElementById('bondAngles').innerHTML = `Bond Angles: ${getBondAngles(n)}`;
+      document.getElementById('bondAngles').innerHTML = `${getBondAngles(n)}`;
 
-      document.getElementById('elecGeo').innerHTML = `Electron Geometry: ${getElecGeo(n)}`;
+      document.getElementById('elecGeo').innerHTML = `${getElecGeo(n)}`;
 
-      document.getElementById('shape').innerHTML = `Shape: ${getShape(n)}`;
+      document.getElementById('shape').innerHTML = `${getShape(n)}`;
 
-      document.getElementById('example').innerHTML = `Example: ${getExample(n)}`;
+      document.getElementById('example').innerHTML = `${getExample(n)}`;
 
       ChemDoodle.io.file.content(`./model/${getExample(n)}.mol`, function(ex) {
         const mol = ChemDoodle.readMOL(ex, 1);
