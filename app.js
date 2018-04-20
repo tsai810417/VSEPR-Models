@@ -16,7 +16,7 @@
 var http = require("http");
 var fs = require("fs");
 
-fs.readFile('./index.html', function (err, html) 
+fs.readFile('./index.html', function (err, html)
 {
     if (err) throw err;
 
@@ -29,5 +29,7 @@ fs.readFile('./index.html', function (err, html)
             response.write(html);
         }
         response.end();
-    }).listen(8080);
+    }).listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 });
