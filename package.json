@@ -23,5 +23,8 @@
   "homepage": "https://github.com/tsai810417/VSEPR-Models#readme",
   "dependencies": {
     "webpack": "^3.4.1"
-  }
+  },
+  "engines": {
+    "node": "4.1.1"
+  },
 }
